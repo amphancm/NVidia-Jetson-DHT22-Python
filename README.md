@@ -20,7 +20,7 @@ Install python-dev
 
 This repository relies on a fork I made. To clone the repository use:
 ```
- git clone --recurse-submodules -j8 https://github.com/GrgoMariani/NVidia-Jetson-DHT22-Python
+ git clone --recurse-submodules -j4 https://github.com/amphancm/NVidia-Jetson-DHT22-Python
 ```
 
 ### Setup
@@ -36,8 +36,8 @@ If you don't know the pin numbers google __Jetson gpio pinout tk1/tx1/tx2/xavier
 Download project and install the python library:
  ```
  cd /path/to/this/dir/
- sudo python setup.py build
- sudo python setup.py install
+ sudo python3 setup.py build
+ sudo python3 setup.py install
  ```
 
 Now your python library is set up on your Jetson.
