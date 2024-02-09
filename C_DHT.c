@@ -166,7 +166,21 @@ static PyMethodDef C_DHT22Methods[] = {
 };
 
 
-PyMODINIT_FUNC 
-initC_DHT(void){
-	(void)Py_InitModule("C_DHT", C_DHT22Methods);
+// PyMODINIT_FUNC 
+// initC_DHT(void){
+// 	(void)Py_InitModule("C_DHT", C_DHT22Methods);
+// };
+
+static struct PyModuleDef C_DHT_module =
+{
+    PyModuleDef_HEAD_INIT,
+    "C_DHT", 	  /* name of module */
+    "",          /* module documentation, may be NULL */
+    -1,          /* size of per-interpreter state of the module, or -1 if the module keeps state in global variables. */
+    C_DHT22Methods
 };
+
+PyMODINIT_FUNC PyInit_C_DHT(void)
+{
+	return PyModule_Create(&C_DHT_module);
+}
