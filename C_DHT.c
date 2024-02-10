@@ -24,8 +24,10 @@
 
 
 // This is currently set to work with Jetson Xavier
-#define PIN0 jetsonxavier_pin37                                  //Define which pin on your Jetson is connected to DHT22 as PIN0 when you use C_DHT.readSensor(0)
-#define PIN1 jetsonxavier_pin29								     //Define which pin on your Jetson is connected to DHT22 as PIN1 when you use C_DHT.readSensor(1),    Check jetsonGPIO.h for more
+//#define PIN0 jetsonxavier_pin37                       //Define which pin on your Jetson is connected to DHT22 as PIN0 when you use C_DHT.readSensor(0)
+//#define PIN1 jetsonxavier_pin29			//Define which pin on your Jetson is connected to DHT22 as PIN1 when you use C_DHT.readSensor(1),    Check jetsonGPIO.h for more
+#define PIN0 jetsonnano_pin11                           
+#define PIN1 jetsonnano_pin12
 
 typedef struct	{
 	int *byte0;	int *byte1;	int *byte2;	int *byte3;	int *byteCheckSum;
